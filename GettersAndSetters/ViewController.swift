@@ -51,7 +51,8 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: TestRow.id,
             for: indexPath) as! TestRow
-        cell.configure(names[indexPath.row])
+        let name = names[indexPath.row]
+        cell.configure(name)
         return cell
     }
 }
