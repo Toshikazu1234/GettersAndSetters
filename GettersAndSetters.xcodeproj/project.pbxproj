@@ -14,6 +14,9 @@
 		501C7F4C2B71945300046176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501C7F4B2B71945300046176 /* Assets.xcassets */; };
 		501C7F4F2B71945300046176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501C7F4D2B71945300046176 /* LaunchScreen.storyboard */; };
 		501C7F572B71961400046176 /* TestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C7F562B71961400046176 /* TestRow.swift */; };
+		501C7F5F2B71A00000046176 /* BasicUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C7F5E2B71A00000046176 /* BasicUser.swift */; };
+		501C7F612B71A02900046176 /* AdminUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C7F602B71A02900046176 /* AdminUser.swift */; };
+		501C7F632B71A0D200046176 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C7F622B71A0D200046176 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		501C7F4E2B71945300046176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		501C7F502B71945300046176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		501C7F562B71961400046176 /* TestRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRow.swift; sourceTree = "<group>"; };
+		501C7F5E2B71A00000046176 /* BasicUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUser.swift; sourceTree = "<group>"; };
+		501C7F602B71A02900046176 /* AdminUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminUser.swift; sourceTree = "<group>"; };
+		501C7F622B71A0D200046176 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 		501C7F5B2B719F5300046176 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				501C7F5E2B71A00000046176 /* BasicUser.swift */,
+				501C7F602B71A02900046176 /* AdminUser.swift */,
+				501C7F622B71A0D200046176 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,8 +184,11 @@
 			files = (
 				501C7F572B71961400046176 /* TestRow.swift in Sources */,
 				501C7F472B71945000046176 /* ViewController.swift in Sources */,
+				501C7F612B71A02900046176 /* AdminUser.swift in Sources */,
 				501C7F432B71945000046176 /* AppDelegate.swift in Sources */,
 				501C7F452B71945000046176 /* SceneDelegate.swift in Sources */,
+				501C7F5F2B71A00000046176 /* BasicUser.swift in Sources */,
+				501C7F632B71A0D200046176 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
