@@ -8,6 +8,15 @@
 import UIKit
 
 final class ViewController: UIViewController {
+    private let key = "SelectedName"
+    private var selectedName: String {
+        get {
+            UserDefaults.standard.string(forKey: key) ?? ""
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: key)
+        }
+    }
     
     private var names: [String] = [] {
         didSet {
@@ -19,6 +28,7 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = selectedName
         tableView.dataSource = self
         tableView.delegate = self
         fetchNames()
@@ -49,5 +59,13 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.height * 0.22
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(
+            at: indexPath,
+            animated: true)
+        let name = names[indexPath.row]
+        selectedName = name
     }
 }
