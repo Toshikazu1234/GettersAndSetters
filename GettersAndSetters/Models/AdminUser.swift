@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AdminUser {
+struct AdminUser: User {
     let id = UUID().uuidString
     let fname: String
     let lname: String
