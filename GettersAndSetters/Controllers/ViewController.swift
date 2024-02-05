@@ -9,16 +9,16 @@ import UIKit
 
 final class ViewController: UIViewController {
     private let key = "SelectedName"
-    private var selectedName: String {
+    private var selectedName: String? {
         get {
-            UserDefaults.standard.string(forKey: key) ?? ""
+            UserDefaults.standard.string(forKey: key)
         }
         set {
             UserDefaults.standard.set(newValue, forKey: key)
         }
     }
     
-    private var names: [String] = [] {
+    private var names: [User] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -37,7 +37,20 @@ final class ViewController: UIViewController {
     private func fetchNames() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             guard let self else { return }
-            names = ["Bob", "John", "Sally", "Sarah", "Debby", "Carl", "Alex", "Natalie", "Sam", "Chuck", "Andy", "Lisa"]
+            names = [
+                BasicUser(fname: "Robert", lname: "Smith", email: "bs@email.com", nickName: "Bob"),
+                BasicUser(fname: "Jonathan", lname: "Cooper", email: "js@email.com", nickName: "John"),
+                BasicUser(fname: "Sally", lname: "White", email: "sw@email.com"),
+                AdminUser(fname: "Sarah", lname: "Chao", email: "sc@email.com", nickName: "Boss Lady"),
+                BasicUser(fname: "Deborah", lname: "Ling", email: "dl@email.com", nickName: "Debby"),
+                AdminUser(fname: "Carl", lname: "Jackson", email: "cj@email.com", nickName: "Boss Man"),
+                BasicUser(fname: "Alex", lname: "Thomson", email: "at@email.com"),
+                BasicUser(fname: "Natalie", lname: "Ramos", email: "nr@email.com"),
+                BasicUser(fname: "Samuel", lname: "Rosario", email: "sr@email.com", nickName: "Sam"),
+                BasicUser(fname: "Chuck", lname: "Cheese", email: "cc@email.com", nickName: "Chucky"),
+                BasicUser(fname: "Andy", lname: "Lightyear", email: "al@email.com"),
+                BasicUser(fname: "Lisa", lname: "Wang", email: "lw@email.com")
+            ]
         }
     }
 }
@@ -67,6 +80,6 @@ extension ViewController: UITableViewDelegate {
             at: indexPath,
             animated: true)
         let name = names[indexPath.row]
-        selectedName = name
+        selectedName = name.nickName
     }
 }

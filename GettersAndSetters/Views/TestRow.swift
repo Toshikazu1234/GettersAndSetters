@@ -20,7 +20,7 @@ final class TestRow: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(_ data: String) {
-        nameLabel.text = data
+    func configure(_ data: User) {
+        nameLabel.text = data.nickName
     }
 }
