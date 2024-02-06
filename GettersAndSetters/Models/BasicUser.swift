@@ -12,5 +12,12 @@ struct BasicUser: User {
     let fname: String
     let lname: String
     let email: String
-    var nickName = ""
+    var nickName: String
+    
+    init(fname: String, lname: String, email: String, nickName: String = "") {
+        self.fname = fname
+        self.lname = lname
+        self.email = email
+        self.nickName = nickName.isEmpty ? fname : nickName
+    }
 }
