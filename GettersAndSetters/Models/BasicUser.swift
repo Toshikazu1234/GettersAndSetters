@@ -13,6 +13,7 @@ struct BasicUser: User {
     let lname: String
     let email: String
     let dob: String
+    
     var nickName: String
     var age: Int {
         guard let date = dob.toDate() else { return 0 }
