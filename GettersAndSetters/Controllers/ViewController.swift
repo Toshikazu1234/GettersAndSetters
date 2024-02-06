@@ -19,7 +19,7 @@ final class ViewController: UIViewController {
         }
     }
     
-    private var names: [User] = [] {
+    private var users: [User] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -38,7 +38,7 @@ final class ViewController: UIViewController {
     private func fetchNames() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             guard let self else { return }
-            names = [
+            users = [
                 BasicUser(fname: "Robert", lname: "Smith", email: "bs@email.com", nickName: "Bob"),
                 BasicUser(fname: "Jonathan", lname: "Cooper", email: "js@email.com", nickName: "John"),
                 BasicUser(fname: "Sally", lname: "White", email: "sw@email.com"),
@@ -59,15 +59,15 @@ final class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: TestRow.id,
             for: indexPath) as! TestRow
-        let name = names[indexPath.row]
-        cell.configure(name)
+        let user = users[indexPath.row]
+        cell.configure(user)
         return cell
     }
 }
@@ -81,7 +81,7 @@ extension ViewController: UITableViewDelegate {
         tableView.deselectRow(
             at: indexPath,
             animated: true)
-        let name = names[indexPath.row]
-        selectedName = name.nickName
+        let user = users[indexPath.row]
+        selectedName = user.nickName
     }
 }
