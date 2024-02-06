@@ -9,4 +9,5 @@ import Foundation
 
 protocol User {
     var nickName: String { get set }
+    var age: Int { get }
 }

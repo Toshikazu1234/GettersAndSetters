@@ -39,19 +39,19 @@ final class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             guard let self else { return }
             users = [
-                BasicUser(fname: "Robert", lname: "Smith", email: "bs@email.com", nickName: "Bob"),
-                BasicUser(fname: "Jonathan", lname: "Cooper", email: "js@email.com", nickName: "John"),
-                BasicUser(fname: "Sally", lname: "White", email: "sw@email.com"),
-                AdminUser(fname: "Sarah", lname: "Chao", email: "sc@email.com", nickName: "Boss Lady"),
-                BasicUser(fname: "Deborah", lname: "Ling", email: "dl@email.com", nickName: "Debby"),
-                AdminUser(fname: "Carl", lname: "Jackson", email: "cj@email.com", nickName: "Boss Man"),
-                BasicUser(fname: "Alex", lname: "Thomson", email: "at@email.com"),
-                BasicUser(fname: "Natalie", lname: "Ramos", email: "nr@email.com"),
-                BasicUser(fname: "Samuel", lname: "Rosario", email: "sr@email.com", nickName: "Sam"),
-                BasicUser(fname: "Chuck", lname: "Cheese", email: "cc@email.com", nickName: "Chucky"),
-                BasicUser(fname: "Andy", lname: "Lightyear", email: "al@email.com"),
-                BasicUser(fname: "Lisa", lname: "Wang", email: "lw@email.com"),
-                AdminUser(fname: "Steve", lname: "Mann", email: "sm@email.com")
+                BasicUser(fname: "Robert", lname: "Smith", email: "bs@email.com", dob: "01/01/1992", nickName: "Bob"),
+                BasicUser(fname: "Jonathan", lname: "Cooper", email: "js@email.com", dob: "03/20/1993", nickName: "John"),
+                BasicUser(fname: "Sally", lname: "White", email: "sw@email.com", dob: "10/07/2000"),
+                AdminUser(fname: "Sarah", lname: "Chao", email: "sc@email.com", dob: "08/08/1988", nickName: "Boss Lady"),
+                BasicUser(fname: "Deborah", lname: "Ling", email: "dl@email.com", dob: "06/30/2001", nickName: "Debby"),
+                AdminUser(fname: "Carl", lname: "Jackson", email: "cj@email.com", dob: "11/11/1990", nickName: "Boss Man"),
+                BasicUser(fname: "Alex", lname: "Thomson", email: "at@email.com", dob: "07/08/1997"),
+                BasicUser(fname: "Natalie", lname: "Ramos", email: "nr@email.com", dob: "08/09/1997"),
+                BasicUser(fname: "Samuel", lname: "Rosario", email: "sr@email.com", dob: "11/10/1999", nickName: "Sam"),
+                BasicUser(fname: "Chuck", lname: "Cheese", email: "cc@email.com", dob: "04/18/1996", nickName: "Chucky"),
+                BasicUser(fname: "Andy", lname: "Lightyear", email: "al@email.com", dob: "05/29/1987"),
+                BasicUser(fname: "Lisa", lname: "Wang", email: "lw@email.com", dob: "09/13/2003"),
+                AdminUser(fname: "Steve", lname: "Mann", email: "sm@email.com", dob: "09/26/2002")
             ]
         }
     }
