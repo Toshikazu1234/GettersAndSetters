@@ -16,8 +16,8 @@ struct AdminUser: User {
     
     var nickName: String
     var age: Int {
-        // Compute the age of this user based on dob
-        return 0
+        guard let date = dob.toDate() else { return 0 }
+        return date.calculateAge()
     }
     
     init(fname: String, lname: String, email: String, dob: String, nickName: String = "") {
