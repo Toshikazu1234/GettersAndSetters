@@ -50,7 +50,8 @@ final class ViewController: UIViewController {
                 BasicUser(fname: "Samuel", lname: "Rosario", email: "sr@email.com", nickName: "Sam"),
                 BasicUser(fname: "Chuck", lname: "Cheese", email: "cc@email.com", nickName: "Chucky"),
                 BasicUser(fname: "Andy", lname: "Lightyear", email: "al@email.com"),
-                BasicUser(fname: "Lisa", lname: "Wang", email: "lw@email.com")
+                BasicUser(fname: "Lisa", lname: "Wang", email: "lw@email.com"),
+                AdminUser(fname: "Steve", lname: "Mann", email: "sm@email.com")
             ]
         }
     }
