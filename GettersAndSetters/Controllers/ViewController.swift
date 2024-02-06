@@ -41,16 +41,16 @@ final class ViewController: UIViewController {
             names = [
                 BasicUser(fname: "Robert", lname: "Smith", email: "bs@email.com", nickName: "Bob"),
                 BasicUser(fname: "Jonathan", lname: "Cooper", email: "js@email.com", nickName: "John"),
-                BasicUser(fname: "Sally", lname: "White", email: "sw@email.com"),
+                BasicUser(fname: "Sally", lname: "White", email: "sw@email.com", nickName: "Sally"),
                 AdminUser(fname: "Sarah", lname: "Chao", email: "sc@email.com", nickName: "Boss Lady"),
                 BasicUser(fname: "Deborah", lname: "Ling", email: "dl@email.com", nickName: "Debby"),
                 AdminUser(fname: "Carl", lname: "Jackson", email: "cj@email.com", nickName: "Boss Man"),
-                BasicUser(fname: "Alex", lname: "Thomson", email: "at@email.com"),
-                BasicUser(fname: "Natalie", lname: "Ramos", email: "nr@email.com"),
+                BasicUser(fname: "Alex", lname: "Thomson", email: "at@email.com", nickName: "Alex"),
+                BasicUser(fname: "Natalie", lname: "Ramos", email: "nr@email.com", nickName: "Natalie"),
                 BasicUser(fname: "Samuel", lname: "Rosario", email: "sr@email.com", nickName: "Sam"),
                 BasicUser(fname: "Chuck", lname: "Cheese", email: "cc@email.com", nickName: "Chucky"),
-                BasicUser(fname: "Andy", lname: "Lightyear", email: "al@email.com"),
-                BasicUser(fname: "Lisa", lname: "Wang", email: "lw@email.com")
+                BasicUser(fname: "Andy", lname: "Lightyear", email: "al@email.com", nickName: "Andy"),
+                BasicUser(fname: "Lisa", lname: "Wang", email: "lw@email.com", nickName: "Lisa")
             ]
         }
     }

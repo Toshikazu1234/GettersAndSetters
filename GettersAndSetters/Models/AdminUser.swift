@@ -12,7 +12,7 @@ struct AdminUser: User {
     let fname: String
     let lname: String
     let email: String
-    var nickName: String? = nil
+    var nickName = ""
     
     func doAdminTask() {
         print("Doing admin task.")

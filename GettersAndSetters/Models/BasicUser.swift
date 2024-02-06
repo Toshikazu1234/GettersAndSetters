@@ -12,5 +12,5 @@ struct BasicUser: User {
     let fname: String
     let lname: String
     let email: String
-    var nickName: String? = nil
+    var nickName = ""
 }

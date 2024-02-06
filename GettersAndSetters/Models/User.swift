@@ -8,5 +8,5 @@
 import Foundation
 
 protocol User {
-    var nickName: String? { get set }
+    var nickName: String { get set }
 }
