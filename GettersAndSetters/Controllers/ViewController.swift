@@ -15,6 +15,7 @@ final class ViewController: UIViewController {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: key)
+            title = newValue
         }
     }
     
