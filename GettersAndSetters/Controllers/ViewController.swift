@@ -82,6 +82,6 @@ extension ViewController: UITableViewDelegate {
             at: indexPath,
             animated: true)
         let user = users[indexPath.row]
-        selectedName = user.nickName
+        selectedName = "\(user.nickName) age: \(user.age)"
     }
 }
